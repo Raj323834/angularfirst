@@ -1,0 +1,107 @@
+<p>check works!</p>
+<h1>If Dom</h1>
+
+
+<h2 *ngIf="mark>=40">you are pass</h2>
+<h2 *ngIf="mark<40">you are fail</h2>
+
+
+<h1>If Else </h1>
+<h1>enter salary here</h1>
+
+<input type="number" name="" [(ngModel)]="salary">
+<h2 *ngIf="salary>30000 ; else hel">you are manager</h2>
+<ng-template #hel>
+ <h2>you are worker</h2>
+</ng-template>
+
+<h1>If else Ladder</h1>
+
+<h2>Enter Marks for check grade</h2>
+
+
+<input type="number" name="" [(ngModel)]="mark2">
+<p>ngif using multiple elseif</p>
+
+<ng-container *ngIf="mark2>=90;else second">You are pass with grade "A+"</ng-container>
+<ng-template #second>
+    <ng-container *ngIf="mark2>=80;else third">You are pass with grade "A"</ng-container>
+</ng-template>
+<ng-template #third>
+    <ng-container *ngIf="mark2>=70;else forth">You are pass with grade "B+"</ng-container>
+</ng-template>
+<ng-template #forth>
+    <ng-container *ngIf="mark2>=60;else fifth">You are pass with grade "B"</ng-container>
+</ng-template>
+<ng-template #fifth>
+    <ng-container *ngIf="mark2>=50;else sixth">You are pass with grade "C+"</ng-container>
+</ng-template>
+<ng-template #sixth>
+    <ng-container *ngIf="mark2>=40;else seventh">You are pass with grade "C"</ng-container>
+</ng-template>
+<ng-template #seventh>
+    <ng-container *ngIf="mark2>=33;else eighth">You are pass with grade "D"</ng-container>
+</ng-template>
+<ng-template #eighth>
+    <ng-container *ngIf="mark2<33;">You are fail.... good luck.. retry again</ng-container>
+</ng-template>
+
+
+<h1>ng elseif ladder</h1>
+<h1>enter number 0 to 10</h1>
+<input type="number" name="" [(ngModel)]="salary2">
+<ng-container *ngIf="salary2 === 0">
+    <h4>you choose future</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 1">
+    <h4>you choose past</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 2">
+    <h4>you are in present</h4>
+</ng-container>
+<ng-container *ngIf="salary2 === 3">
+    <!-- Conteúdo 0 aqui -->
+    <h4>hello enter in future</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 4">
+    <!-- Conteúdo 1 aqui -->
+    <h4>whats going on</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 5">
+    <!-- Conteúdo 2 aqui -->
+    <h4>life is hell and future more hell</h4>
+</ng-container>
+<ng-container *ngIf="salary2 === 6">
+    <!-- Conteúdo 0 aqui -->
+    <h4>future bright and present is hell</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 7">
+    <!-- Conteúdo 1 aqui -->
+    <h4>you love your mother</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 8">
+    <h4>you love me</h4>
+</ng-container>
+<ng-container *ngIf="salary2 === 9">
+    <h4>you love your mom</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 === 10">
+    <!-- Conteúdo 1 aqui -->
+    <h4>you are low thinker</h4>
+</ng-container>
+
+<ng-container *ngIf="salary2 > 10">
+    <!-- Conteúdo 2 aqui -->
+    <h1>you are cheater</h1>
+</ng-container>
+
+
+
+    

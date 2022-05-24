@@ -1,0 +1,20 @@
+<div style="text-align:center">
+<p>calculator trying to it</p>
+<h1>{{title}}</h1>
+<a>Enter 1st number</a>
+<input type="number" name="num1"  [(ngModel)]="num1">
+<a>Enter 2nd number</a>
+<input type="number" name="num2"  [(ngModel)]="num2">
+<br>
+<br>
+<br>
+<button (click)="add()" [style]="style1">Addition</button>
+<button (click)="sub()" [style]="style2">Subtraction</button>
+<button (click)="mult()" [style]="style3">Multiplication</button>
+<button (click)="div()" [style]="style4">Division</button>
+
+<br>
+<h2 [style]="style5">Result : {{num3}}</h2>
+<br>
+<button (click)="fun()">raj</button>
+</div>

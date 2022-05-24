@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Arrays</h2>
+    <p id="abh12"></p>
+    <!--Note: Array indexes start with 0.
+    [0] is the first element. [1] is the second element.-->
+    <p id="dabh13"></p>
+    <p id="demo"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo25"></p>
+    <p id="demo52"></p>
+    <p>The best way to loop through an array is using a standard for loop:</p>
+
+    <p id="demo51"></p>
+
+    <p>Array.forEach() calls a function for each array element.</p>
+
+    <p id="demo57"></p>
+
+
+    <script>
+     const cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("abh12").innerHTML = cars[0];
+
+    const cars21 = ["Saab", "Volvo", "BMW"];
+    document.getElementById("dabh13").innerHTML = cars21;
+
+const cars34 = [
+  "Saab",
+  "Volvo",
+  "BMW"
+];
+document.getElementById("demo").innerHTML = cars34;
+
+const cars31 = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+document.getElementById("demo12").innerHTML = cars31;
+
+const person = ["John", "Doe", 46];
+document.getElementById("demo13").innerHTML = person[0];
+
+
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo25").innerHTML = fruits.length;
+
+
+var fruits52 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo52").innerHTML = fruits52[fruits.length-1];
+
+
+
+
+const fruits58 = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits58.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits58[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo51").innerHTML = text;
+
+
+
+
+const fruits57 = ["Banana", "Orange", "Apple", "Mango"];
+
+let text2 = "<ul>";
+fruits57.forEach(myFunction);
+text2 += "</ul>";
+document.getElementById("demo57").innerHTML = text;
+
+function myFunction(value) {
+  text2 += "<li>" + value + "</li>";
+} 
+
+
+</script>
+</body>
+</html>
